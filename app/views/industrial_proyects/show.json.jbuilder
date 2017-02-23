@@ -1,0 +1,1 @@
+json.partial! "industrial_proyects/industrial_proyect", industrial_proyect: @industrial_proyect

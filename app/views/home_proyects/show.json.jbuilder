@@ -1,0 +1,1 @@
+json.partial! "home_proyects/home_proyect", home_proyect: @home_proyect

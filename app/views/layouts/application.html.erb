@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chemischrom</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="alert alert-warning alert-dismissible fade show" style="<%= "display:none;" if alert.nil? && notice.nil? %>" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%= notice %><%= alert %>
+    </div>
+    <% if current_page?(root_path) %>
+      <header class="home-header">
+        <div class="filter-0"></div>
+        <div class="container">
+          <div class="filter-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 678.79 368.43"><defs><style>.filter-1{isolation:isolate;mix-blend-mode:multiply;}.filter-1-2{mix-blend-mode:multiply;}.filter-1-3{fill:#00a99d;}</style></defs><title>filter-1</title><g class="filter-1"><g id="Layer_2" data-name="Layer 2"><g id="header"><g class="filter-1-2"><polygon class="filter-1-3" points="423.02 368.43 678.79 112.66 648.6 0 0 0 73.64 274.81 423.02 368.43"/></g></g></g></g></svg>
+          </div>
+          <div class="filter-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100.58 597.37"><defs><style>.filter-2{isolation:isolate;mix-blend-mode:multiply;}.filter-2-2{mix-blend-mode:multiply;}.filter-2-3{fill:#71c6eb;}</style></defs><title>filter-2</title><g class="filter-2"><g id="Layer_2" data-name="Layer 2"><g id="header"><g class="filter-2-2"><polygon class="filter-2-3" points="414.7 0 0 414.7 48.95 597.37 1100.58 597.37 981.19 151.79 414.7 0"/></g></g></g></g></svg>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="logo">
+                <%= link_to root_path do%>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.61 68.93">
+                    <defs><style>.svg-white{fill:#fff;}</style></defs>
+                    <title>logo-white</title>
+                    <g id="Layer_2" data-name="Layer 2"><g id="header"><path class="svg-white" d="M25.93,45.73,7.87,34v13L25.93,58.72V68.93L21.08,65.8,7.87,57.23v0L0,52.19V18.79l7.87,5.06h0L25.93,35.51ZM23.2,31.06V12.59L8.88,21.86,1,16.77,27,0l26,16.77L45,21.86l-14-9v18L27,33.47Zm30.71,8.43L46,44.54v-8l7.87-5.08Zm0-10.68L35.85,40.58V53.79L53.91,42.11V52.19L28,68.93V35.51L53.91,18.79Z"/><path class="svg-white" d="M72.46,20.52c-6.6,0-6.6,10.17,0,10.17a7.14,7.14,0,0,0,3.22-.75l.45,3.45a10.65,10.65,0,0,1-3.66.7c-11.31,0-11.29-16.93,0-16.93a8.12,8.12,0,0,1,3.29.65l-.4,3.43A5.66,5.66,0,0,0,72.46,20.52Z"/><path class="svg-white" d="M87.1,34V27.38h-5V34H78.78V17.38h3.33V24h5V17.38h3.33V34Z"/><path class="svg-white" d="M94.19,34V17.38h8.35v3.34h-5V24h4.38v3.33H97.53v3.33h5.29V34Z"/><path class="svg-white" d="M120.17,17.12h1V34h-3.38l0-9.3-4.27,4.48-4.27-4.48V34h-3.38V17.12H107l6.58,7.32Z"/><path class="svg-white" d="M125,34V17.38h3.33V34Z"/><path class="svg-white" d="M131.72,29.48a7.49,7.49,0,0,0,4.76,1.33,1.68,1.68,0,0,0,1.72-1.68c-.07-1-.79-1.38-1.72-1.7-2.61-1-4.94-2.29-4.94-5.08a4.89,4.89,0,0,1,4.71-5.08,9.85,9.85,0,0,1,4.15.7L140,21.18a7.59,7.59,0,0,0-3.41-.7,1.65,1.65,0,0,0-1.66,1.87c.09.93.91,1.35,1.87,1.68,2.59,1,4.83,2.45,4.83,5.11a5,5,0,0,1-5,5.06A10.43,10.43,0,0,1,131.3,33Z"/><path class="svg-white" d="M72.2,40.07c-6.42,0-6.42,9.9,0,9.9a7,7,0,0,0,3.13-.73l.43,3.36a10.36,10.36,0,0,1-3.57.68c-11,0-11-16.48,0-16.48a7.91,7.91,0,0,1,3.2.64L75,40.78A5.53,5.53,0,0,0,72.2,40.07Z"/><path class="svg-white" d="M86.47,53.24V46.75H81.61v6.49H78.36V37h3.25V43.5h4.86V37h3.25V53.24Z"/><path class="svg-white" d="M101.45,53.24,98.18,47H96.62v6.2H93.37V37h6.4c5.79,0,6.36,8.15,1.59,9.54l3.77,6.7Zm-4.84-9.36h2.86c2.2,0,2.2-3.63,0-3.63H96.62Z"/><path class="svg-white" d="M115.1,36.74c11.17,0,11.17,16.73,0,16.73S103.93,36.74,115.1,36.74Zm0,3.34c-6.5,0-6.5,10,0,10S121.59,40.07,115.1,40.07Z"/><path class="svg-white" d="M140.38,36.76h1V53.24H138.1l0-9.06L134,48.54l-4.16-4.36v9.06h-3.29V36.76h1l6.4,7.13Z"/></g></g>
+                  </svg>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-7 offset-md-1">
+              <ul class="nav justify-content-end menu">
+                <li class="nav-item">
+                  <%= link_to hogar_index_path, class: "nav-link hogar-menu" do %>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.home-1{fill:none;}.home-2{fill:#fff;}</style></defs>
+                      <title>home</title>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="lineascroll"><rect class="home-1" width="52.54" height="52.54"/>
+                          <path class="home-2" d="M40.21,29.36,27.68,16.82a2,2,0,0,0-2.81,0L12.33,29.36a2,2,0,0,1-2.81,0l-.66-.66a2,2,0,0,1,0-2.81l16-16a2,2,0,0,1,2.81,0l16,16a2,2,0,0,1,0,2.81l-.66.66A2,2,0,0,1,40.21,29.36Z"/>
+                          <path class="home-2" d="M33.46,27.39V38.77H19.08V27.39a.47.47,0,0,0-.8-.33l-4.37,4.37v9.49a2.33,2.33,0,0,0,2.33,2.33h20a2.33,2.33,0,0,0,2.33-2.33V31.43l-4.37-4.37A.47.47,0,0,0,33.46,27.39Z"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <p>hogar</p>
+                  <% end %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to industria_index_path, class: "nav-link industrial" do%>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.industria-1{fill:#fff;}.industria-2{fill:none;}</style></defs><title>industrie</title><g id="Layer_2" data-name="Layer 2"><g id="lineascroll"><path class="industria-1" d="M42.39,43.39H10.15a2,2,0,0,1-2-2V28l9.63-4.38a.47.47,0,0,1,.67.43v3.17h1.89v-2.5L30,20.38a.47.47,0,0,1,.67.43v6.45h1.84V11.71A1.69,1.69,0,0,1,34.18,10H39l5.4,3.9V41.39A2,2,0,0,1,42.39,43.39ZM11.24,40.3H41.3V15.5L38,13.11H35.58V29.22a1.13,1.13,0,0,1-1.13,1.13H28.69a1.13,1.13,0,0,1-1.13-1.13V24.88l-4.12,1.88v2.47a1.13,1.13,0,0,1-1.13,1.13H16.5a1.13,1.13,0,0,1-1.13-1.13V28.16L11.24,30Z"/><rect class="industria-1" x="15.32" y="33.59" width="3.27" height="2.33"/><rect class="industria-1" x="20.14" y="33.59" width="3.27" height="2.33"/><rect class="industria-1" x="27.51" y="33.59" width="3.27" height="2.33"/><rect class="industria-1" x="32.33" y="33.59" width="3.27" height="2.33"/><rect class="industria-2" width="52.54" height="52.54"/></g></g></svg>
+                    <p>industria</p>
+                  <% end %>
+                </li>
+                <li>
+                  <% if admin_signed_in? %>
+                    <%= link_to destroy_admin_session_path, class: "btn btn-danger", method: :delete do%>
+                      Salir
+                    <% end %>
+                  <% end %>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-secondary contacto" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.contact-1{fill:#fff;}.contact-2{fill:none;}</style></defs><title>contact</title><g id="Layer_2" data-name="Layer 2"><g id="lineascroll"><path class="contact-1" d="M10.86,27.22l7.71,3,1.36,9.46,5.46-6.53,12.28,6.53V13.74Zm9.66,7.87-.7-5.16,12-9Z"/><rect class="contact-2" width="52.54" height="52.54"/></g></g></svg>
+                    <p>Contacto</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="hero">
+            <h2>
+              Conoce este novedoso sistema
+            </h2>
+            <p>Y que tu suelo destaque por su propio brillo.</p>
+          </div>
+        </div>
+      </header>
+    <% else %>
+      <header class="header-global">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="logo">
+                <%= link_to root_path do%>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 141.61 68.93">
+                    <defs><style>.svg-white{fill:#fff;}</style></defs>
+                    <title>logo-white</title>
+                    <g id="Layer_2" data-name="Layer 2"><g id="header"><path class="svg-white" d="M25.93,45.73,7.87,34v13L25.93,58.72V68.93L21.08,65.8,7.87,57.23v0L0,52.19V18.79l7.87,5.06h0L25.93,35.51ZM23.2,31.06V12.59L8.88,21.86,1,16.77,27,0l26,16.77L45,21.86l-14-9v18L27,33.47Zm30.71,8.43L46,44.54v-8l7.87-5.08Zm0-10.68L35.85,40.58V53.79L53.91,42.11V52.19L28,68.93V35.51L53.91,18.79Z"/><path class="svg-white" d="M72.46,20.52c-6.6,0-6.6,10.17,0,10.17a7.14,7.14,0,0,0,3.22-.75l.45,3.45a10.65,10.65,0,0,1-3.66.7c-11.31,0-11.29-16.93,0-16.93a8.12,8.12,0,0,1,3.29.65l-.4,3.43A5.66,5.66,0,0,0,72.46,20.52Z"/><path class="svg-white" d="M87.1,34V27.38h-5V34H78.78V17.38h3.33V24h5V17.38h3.33V34Z"/><path class="svg-white" d="M94.19,34V17.38h8.35v3.34h-5V24h4.38v3.33H97.53v3.33h5.29V34Z"/><path class="svg-white" d="M120.17,17.12h1V34h-3.38l0-9.3-4.27,4.48-4.27-4.48V34h-3.38V17.12H107l6.58,7.32Z"/><path class="svg-white" d="M125,34V17.38h3.33V34Z"/><path class="svg-white" d="M131.72,29.48a7.49,7.49,0,0,0,4.76,1.33,1.68,1.68,0,0,0,1.72-1.68c-.07-1-.79-1.38-1.72-1.7-2.61-1-4.94-2.29-4.94-5.08a4.89,4.89,0,0,1,4.71-5.08,9.85,9.85,0,0,1,4.15.7L140,21.18a7.59,7.59,0,0,0-3.41-.7,1.65,1.65,0,0,0-1.66,1.87c.09.93.91,1.35,1.87,1.68,2.59,1,4.83,2.45,4.83,5.11a5,5,0,0,1-5,5.06A10.43,10.43,0,0,1,131.3,33Z"/><path class="svg-white" d="M72.2,40.07c-6.42,0-6.42,9.9,0,9.9a7,7,0,0,0,3.13-.73l.43,3.36a10.36,10.36,0,0,1-3.57.68c-11,0-11-16.48,0-16.48a7.91,7.91,0,0,1,3.2.64L75,40.78A5.53,5.53,0,0,0,72.2,40.07Z"/><path class="svg-white" d="M86.47,53.24V46.75H81.61v6.49H78.36V37h3.25V43.5h4.86V37h3.25V53.24Z"/><path class="svg-white" d="M101.45,53.24,98.18,47H96.62v6.2H93.37V37h6.4c5.79,0,6.36,8.15,1.59,9.54l3.77,6.7Zm-4.84-9.36h2.86c2.2,0,2.2-3.63,0-3.63H96.62Z"/><path class="svg-white" d="M115.1,36.74c11.17,0,11.17,16.73,0,16.73S103.93,36.74,115.1,36.74Zm0,3.34c-6.5,0-6.5,10,0,10S121.59,40.07,115.1,40.07Z"/><path class="svg-white" d="M140.38,36.76h1V53.24H138.1l0-9.06L134,48.54l-4.16-4.36v9.06h-3.29V36.76h1l6.4,7.13Z"/></g></g>
+                  </svg>
+                <% end %>
+              </div>
+            </div>
+            <div class="col-md-7 offset-md-1">
+              <ul class="nav justify-content-end menu">
+                <li class="nav-item">
+                  <%= link_to hogar_index_path, class: "nav-link hogar-menu" do %>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.home-1{fill:none;}.home-2{fill:#fff;}</style></defs>
+                      <title>home</title>
+                      <g id="Layer_2" data-name="Layer 2">
+                        <g id="lineascroll"><rect class="home-1" width="52.54" height="52.54"/>
+                          <path class="home-2" d="M40.21,29.36,27.68,16.82a2,2,0,0,0-2.81,0L12.33,29.36a2,2,0,0,1-2.81,0l-.66-.66a2,2,0,0,1,0-2.81l16-16a2,2,0,0,1,2.81,0l16,16a2,2,0,0,1,0,2.81l-.66.66A2,2,0,0,1,40.21,29.36Z"/>
+                          <path class="home-2" d="M33.46,27.39V38.77H19.08V27.39a.47.47,0,0,0-.8-.33l-4.37,4.37v9.49a2.33,2.33,0,0,0,2.33,2.33h20a2.33,2.33,0,0,0,2.33-2.33V31.43l-4.37-4.37A.47.47,0,0,0,33.46,27.39Z"/>
+                        </g>
+                      </g>
+                    </svg>
+                    <p>hogar</p>
+                  <% end %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to industria_index_path, class: "nav-link industrial" do%>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.industria-1{fill:#fff;}.industria-2{fill:none;}</style></defs><title>industrie</title><g id="Layer_2" data-name="Layer 2"><g id="lineascroll"><path class="industria-1" d="M42.39,43.39H10.15a2,2,0,0,1-2-2V28l9.63-4.38a.47.47,0,0,1,.67.43v3.17h1.89v-2.5L30,20.38a.47.47,0,0,1,.67.43v6.45h1.84V11.71A1.69,1.69,0,0,1,34.18,10H39l5.4,3.9V41.39A2,2,0,0,1,42.39,43.39ZM11.24,40.3H41.3V15.5L38,13.11H35.58V29.22a1.13,1.13,0,0,1-1.13,1.13H28.69a1.13,1.13,0,0,1-1.13-1.13V24.88l-4.12,1.88v2.47a1.13,1.13,0,0,1-1.13,1.13H16.5a1.13,1.13,0,0,1-1.13-1.13V28.16L11.24,30Z"/><rect class="industria-1" x="15.32" y="33.59" width="3.27" height="2.33"/><rect class="industria-1" x="20.14" y="33.59" width="3.27" height="2.33"/><rect class="industria-1" x="27.51" y="33.59" width="3.27" height="2.33"/><rect class="industria-1" x="32.33" y="33.59" width="3.27" height="2.33"/><rect class="industria-2" width="52.54" height="52.54"/></g></g></svg>
+                    <p>industria</p>
+                  <% end %>
+                </li>
+                <li>
+                  <% if admin_signed_in? %>
+                    <%= link_to destroy_admin_session_path, class: "btn btn-danger", method: :delete do%>
+                      Salir
+                    <% end %>
+                  <% end %>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-secondary contacto" data-toggle="modal" data-target=".bd-example-modal-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:none;}</style></defs><title>contact</title><g id="Layer_2" data-name="Layer 2"><g id="lineascroll"><path class="cls-1" d="M10.86,27.22l7.71,3,1.36,9.46,5.46-6.53,12.28,6.53V13.74Zm9.66,7.87-.7-5.16,12-9Z"/><rect class="cls-2" width="52.54" height="52.54"/></g></g></svg>
+                    <p>Contacto</p>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    <% end %>
+
+
+    <%= yield %>
+
+    <% if admin_signed_in? %>
+      <p>oli</p>
+    <% else %>
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <%= render "contacts/form"  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+  </body>
+</html>

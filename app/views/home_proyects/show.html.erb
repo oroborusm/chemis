@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @home_proyect.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @home_proyect.description %>
+</p>
+
+<p>
+  <strong>Large description:</strong>
+  <%= @home_proyect.large_description %>
+</p>
+
+<%= link_to 'Edit', edit_home_proyect_path(@home_proyect) %> |
+<%= link_to 'Back', home_proyects_path %>

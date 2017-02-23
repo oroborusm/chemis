@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Industrial Proyects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Large description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @industrial_proyects.each do |industrial_proyect| %>
+      <tr>
+        <td><%= industrial_proyect.name %></td>
+        <td><%= industrial_proyect.description %></td>
+        <td><%= industrial_proyect.large_description %></td>
+        <td><%= link_to 'Show', industrial_proyect %></td>
+        <td><%= link_to 'Edit', edit_industrial_proyect_path(industrial_proyect) %></td>
+        <td><%= link_to 'Destroy', industrial_proyect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Industrial Proyect', new_industrial_proyect_path %>

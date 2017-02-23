@@ -1,0 +1,1 @@
+json.array! @industrial_proyects, partial: 'industrial_proyects/industrial_proyect', as: :industrial_proyect

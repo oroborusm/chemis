@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @industrial_proyect.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @industrial_proyect.description %>
+</p>
+
+<p>
+  <strong>Large description:</strong>
+  <%= @industrial_proyect.large_description %>
+</p>
+
+<%= link_to 'Edit', edit_industrial_proyect_path(@industrial_proyect) %> |
+<%= link_to 'Back', industrial_proyects_path %>
