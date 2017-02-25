@@ -5,12 +5,12 @@ class IndustrialProyectsController < ApplicationController
   # GET /industrial_proyects.json
   def index
     @industrial_proyects = IndustrialProyect.all
-    @contact = Contact.new
   end
 
   # GET /industrial_proyects/1
   # GET /industrial_proyects/1.json
   def show
+    @iadjunto = Iadjunto.new
   end
 
   # GET /industrial_proyects/new

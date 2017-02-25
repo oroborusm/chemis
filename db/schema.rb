@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223161309) do
+ActiveRecord::Schema.define(version: 20170225042130) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -37,12 +37,34 @@ ActiveRecord::Schema.define(version: 20170223161309) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "home_proyects", force: :cascade do |t|
+  create_table "hadjuntos", force: :cascade do |t|
+    t.integer  "hogar_proyect_id"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["hogar_proyect_id"], name: "index_hadjuntos_on_hogar_proyect_id"
+  end
+
+  create_table "hogar_proyects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.text     "large_description"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+  end
+
+  create_table "iadjuntos", force: :cascade do |t|
+    t.integer  "industrial_proyect_id"
+    t.string   "imagen_file_name"
+    t.string   "imagen_content_type"
+    t.integer  "imagen_file_size"
+    t.datetime "imagen_updated_at"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["industrial_proyect_id"], name: "index_iadjuntos_on_industrial_proyect_id"
   end
 
   create_table "industrial_proyects", force: :cascade do |t|

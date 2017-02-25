@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hogar Proyects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Large description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hogar_proyects.each do |hogar_proyect| %>
+      <tr>
+        <td><%= hogar_proyect.name %></td>
+        <td><%= hogar_proyect.description %></td>
+        <td><%= hogar_proyect.large_description %></td>
+        <td><%= link_to 'Show', hogar_proyect %></td>
+        <td><%= link_to 'Edit', edit_hogar_proyect_path(hogar_proyect) %></td>
+        <td><%= link_to 'Destroy', hogar_proyect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hogar Proyect', new_hogar_proyect_path %>

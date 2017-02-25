@@ -1,0 +1,2 @@
+module HadjuntosHelper
+end

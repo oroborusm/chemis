@@ -15,5 +15,19 @@
   <%= @industrial_proyect.large_description %>
 </p>
 
+<% if admin_signed_in? %>
+  <%= render 'iadjuntos/form', industrial_proyect_id: @industrial_proyect.id %>
+<% end %>
+<ul>
+  <% @industrial_proyect.iadjuntos.each do |li| %>
+    <li>
+      <p>
+        <%= image_tag (li.imagen.url) %>
+          <span><%=  link_to "x", li, method: :delete %></span>
+        </p>
+    </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_industrial_proyect_path(@industrial_proyect) %> |
 <%= link_to 'Back', industrial_proyects_path %>

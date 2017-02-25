@@ -1,0 +1,23 @@
+<%= form_for (@hadjunto) do |f| %>
+  <% if @hadjunto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @hadjunto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.hidden_field :hogar_proyect_id, value: hogar_proyect_id %>
+
+  <div class="field">
+    <%= f.label :list %><br>
+    <%= f.file_field :imagen %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

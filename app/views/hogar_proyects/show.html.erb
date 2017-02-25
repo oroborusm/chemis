@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hogar_proyect.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hogar_proyect.description %>
+</p>
+
+<p>
+  <strong>Large description:</strong>
+  <%= @hogar_proyect.large_description %>
+</p>
+
+<% if admin_signed_in? %>
+  <%= render 'hadjuntos/form', hogar_proyect_id: @hogar_proyect.id %>
+<% end %>
+<ul>
+  <% @hogar_proyect.hadjuntos.each do |li| %>
+    <li>
+      <p>
+        <%= image_tag (li.imagen.url) %>
+          <span><%=  link_to "x", li, method: :delete %></span>
+        </p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_hogar_proyect_path(@hogar_proyect) %> |
+<%= link_to 'Back', hogar_proyects_path %>

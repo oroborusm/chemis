@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   devise_for :admins
+
   resources :contacts,  only: [:create]
+  resources :hogar_proyects, only: [:index, :show]
+  resources :hadjuntos, only: [:create, :destroy, :new]
   resources :industrial_proyects, only: [:index, :show]
-  resources :home_proyects, only: [:index, :show]
+  resources :iadjuntos, only: [:create, :destroy, :new]
 
   authenticated :admin do
     resources :industrial_proyects
-    resources :home_proyects
     resources :contacts
   end
 

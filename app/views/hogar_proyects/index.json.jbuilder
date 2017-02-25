@@ -1,0 +1,1 @@
+json.array! @hogar_proyects, partial: 'hogar_proyects/hogar_proyect', as: :hogar_proyect
