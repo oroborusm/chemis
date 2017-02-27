@@ -60,17 +60,17 @@
                   <% end %>
                 </li>
                 <li>
-                  <% if admin_signed_in? %>
-                    <%= link_to destroy_admin_session_path, class: "btn btn-danger", method: :delete do%>
-                      Salir
-                    <% end %>
-                  <% end %>
-                </li>
-                <li>
                   <button type="button" class="btn btn-secondary contacto" data-toggle="modal" data-target=".bd-example-modal-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.contact-1{fill:#fff;}.contact-2{fill:none;}</style></defs><title>contact</title><g id="Layer_2" data-name="Layer 2"><g id="lineascroll"><path class="contact-1" d="M10.86,27.22l7.71,3,1.36,9.46,5.46-6.53,12.28,6.53V13.74Zm9.66,7.87-.7-5.16,12-9Z"/><rect class="contact-2" width="52.54" height="52.54"/></g></g></svg>
                     <p>Contacto</p>
                   </button>
+                </li>
+                <li class="nav-item">
+                  <% if admin_signed_in? %>
+                    <%= link_to destroy_admin_session_path, class: "nav-link admin-link", method: :delete do%>
+                      <p>Salir</p>
+                    <% end %>
+                  <% end %>
                 </li>
               </ul>
             </div>
@@ -121,17 +121,17 @@
                   <% end %>
                 </li>
                 <li>
-                  <% if admin_signed_in? %>
-                    <%= link_to destroy_admin_session_path, class: "btn btn-danger", method: :delete do%>
-                      Salir
-                    <% end %>
-                  <% end %>
-                </li>
-                <li>
                   <button type="button" class="btn btn-secondary contacto" data-toggle="modal" data-target=".bd-example-modal-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.54 52.54"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:none;}</style></defs><title>contact</title><g id="Layer_2" data-name="Layer 2"><g id="lineascroll"><path class="cls-1" d="M10.86,27.22l7.71,3,1.36,9.46,5.46-6.53,12.28,6.53V13.74Zm9.66,7.87-.7-5.16,12-9Z"/><rect class="cls-2" width="52.54" height="52.54"/></g></g></svg>
                     <p>Contacto</p>
                   </button>
+                </li>
+                <li class="nav-item">
+                  <% if admin_signed_in? %>
+                    <%= link_to destroy_admin_session_path, class: "nav-link admin-link", method: :delete do%>
+                      <p>Salir</p>
+                    <% end %>
+                  <% end %>
                 </li>
               </ul>
             </div>
